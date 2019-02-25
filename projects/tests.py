@@ -31,6 +31,12 @@ class ViewTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Go back', response.body)
 
+    def test_howdy(self):
+        from .views import howdy
+        request=testing.DummyRequest()
+        response=howdy(request)
+        self.assertEqual('howdy',response['name'])
+
 
 class FunctionalTests(unittest.TestCase):
     def setUp(self):
@@ -51,5 +57,10 @@ class FunctionalTests(unittest.TestCase):
     def test_hello(self):
         res = self.testapp.get('/hello', status=200)
         self.assertIn(b'<body>Go back ', res.body) # “b” 将字符串转化为byte字节码，便于传输，用于网页请求响应
+
+    def test_howdy(self):
+        res = self.testapp.get('/howdy', status=200)
+        self.assertIn(b'<h1>Hi howdy</h1>',res.body)
+
 
 
