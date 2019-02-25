@@ -1,5 +1,6 @@
 pyramid
 pyramid_jinja2
+pyramid_chameleon
 pyramid_debugtoolbar
 waitress
 

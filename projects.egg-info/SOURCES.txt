@@ -18,5 +18,6 @@ projects.egg-info/top_level.txt
 projects/static/pyramid-16x16.png
 projects/static/pyramid.png
 projects/static/theme.css
+projects/templates/howdy.pt
 projects/templates/layout.jinja2
 projects/templates/mytemplate.jinja2
