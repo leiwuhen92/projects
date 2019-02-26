@@ -17,7 +17,8 @@ def main(global_config, **settings):
 ##########################################################################
     config.add_route('hello', '/hello')
     config.add_route('hi', '/hi')
-    config.add_route('howdy', '/howdy')
+    config.add_route('one', '/one')
+    config.add_route('two', '/two')
 
 
     config.scan()

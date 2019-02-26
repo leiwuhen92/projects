@@ -31,11 +31,17 @@ class ViewTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Go back', response.body)
 
-    def test_howdy(self):
-        from .views import howdy
+    def test_one(self):
+        from .views import projectsviews
         request=testing.DummyRequest()
-        response=howdy(request)
-        self.assertEqual('howdy',response['name'])
+        response=projectsviews(request).one()
+        self.assertEqual('one',response['name'])
+
+    def test_two(self):
+        from .views import projectsviews
+        request=testing.DummyRequest()
+        response=projectsviews(request).two()
+        self.assertEqual('two',response['name'])
 
 
 class FunctionalTests(unittest.TestCase):
@@ -58,9 +64,13 @@ class FunctionalTests(unittest.TestCase):
         res = self.testapp.get('/hello', status=200)
         self.assertIn(b'<body>Go back ', res.body) # “b” 将字符串转化为byte字节码，便于传输，用于网页请求响应
 
-    def test_howdy(self):
-        res = self.testapp.get('/howdy', status=200)
-        self.assertIn(b'<h1>Hi howdy</h1>',res.body)
+    def test_one(self):
+        res = self.testapp.get('/one', status=200)
+        self.assertIn(b'<h1>Hi one</h1>',res.body)
+
+    def test_two(self):
+        res = self.testapp.get('/two', status=200)
+        self.assertIn(b'<h1>Hi two</h1>',res.body)
 
 
 

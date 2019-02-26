@@ -1,6 +1,9 @@
-from pyramid.view import view_config
+from pyramid.view import (
+    view_config,
+    view_defaults
+    )
 from pyramid.response import Response
-import json
+
 
 @view_config(route_name='home', renderer='templates/mytemplate.jinja2')
 def my_view(request):
@@ -21,7 +24,15 @@ def hello(request):
 
 
 ############################模板##################################
-# /howdy
-@view_config(route_name='howdy',renderer='templates/howdy.pt')
-def howdy(request):
-    return {'name': 'howdy'}
+@view_defaults(renderer='templates/howdy.pt')
+class projectsviews:
+    def __init__(self, request):
+        self.request = request
+
+    @view_config(route_name='one')
+    def one(self):
+        return {'name': 'one'}
+
+    @view_config(route_name='two')
+    def two(self):
+        return {'name': 'two'}
