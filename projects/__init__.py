@@ -25,6 +25,8 @@ def main(global_config, **settings):
 
     config.add_route('plain','/plain')
 
+    config.add_route('chapter11', '/chapter11/{first}/{last}')
+
 
     config.scan('.views')
     return config.make_wsgi_app()

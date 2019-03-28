@@ -47,3 +47,15 @@ class projectsviews:
             content_type='text/plain',
             body=body
         )
+
+
+
+@view_config(route_name='chapter11',renderer='templates/chapter11.pt')
+def chapter11(request):
+    first = request.matchdict['first']
+    last = request.matchdict['last']
+    return {
+            'name': 'Home View',
+            'first': first,
+            'last': last
+        }
