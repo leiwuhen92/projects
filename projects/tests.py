@@ -35,13 +35,26 @@ class ViewTests(unittest.TestCase):
         from .views import projectsviews
         request=testing.DummyRequest()
         response=projectsviews(request).one()
-        self.assertEqual('one',response['name'])
+        self.assertEqual(response.status,'302 Found')
 
     def test_two(self):
         from .views import projectsviews
         request=testing.DummyRequest()
         response=projectsviews(request).two()
         self.assertEqual('two',response['name'])
+
+    def test_plain_without_name(self):
+        from .views import projectsviews
+        request = testing.DummyRequest()
+        response=projectsviews(request).plain()
+        self.assertIn(b'No Name Provided', response.body)
+
+    def test_plain_with_name(self):
+        from .views import projectsviews
+        request = testing.DummyRequest()
+        request.GET['name']='wuhen'
+        response=projectsviews(request).plain()
+        self.assertIn(b'wuhen', response.body)
 
 
 class FunctionalTests(unittest.TestCase):
@@ -64,13 +77,17 @@ class FunctionalTests(unittest.TestCase):
         res = self.testapp.get('/hello', status=200)
         self.assertIn(b'<body>Go back ', res.body) # “b” 将字符串转化为byte字节码，便于传输，用于网页请求响应
 
-    def test_one(self):
-        res = self.testapp.get('/one', status=200)
-        self.assertIn(b'<h1>Hi one</h1>',res.body)
-
     def test_two(self):
         res = self.testapp.get('/two', status=200)
         self.assertIn(b'<h1>Hi two</h1>',res.body)
+
+    def test_plain_without_name(self):
+        res = self.testapp.get('/plain', status=200)
+        self.assertIn(b'No Name Provided', res.body)
+
+    def test_plain_with_name(self):
+        res = self.testapp.get('/plain?name=wuhen', status=200)
+        self.assertIn(b'wuhen', res.body)
 
 
 

@@ -15,11 +15,16 @@ def main(global_config, **settings):
 
 
 ##########################################################################
+    ##函数视图
     config.add_route('hello', '/hello')
     config.add_route('hi', '/hi')
+
+    ##类视图
     config.add_route('one', '/one')
     config.add_route('two', '/two')
 
+    config.add_route('plain','/plain')
 
-    config.scan()
+
+    config.scan('.views')
     return config.make_wsgi_app()

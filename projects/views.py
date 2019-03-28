@@ -3,6 +3,7 @@ from pyramid.view import (
     view_defaults
     )
 from pyramid.response import Response
+from pyramid.httpexceptions import HTTPFound
 
 
 @view_config(route_name='home', renderer='templates/mytemplate.jinja2')
@@ -31,8 +32,18 @@ class projectsviews:
 
     @view_config(route_name='one')
     def one(self):
-        return {'name': 'one'}
+        #return {'name': 'one'}
+        return HTTPFound(location='/plain')  #重定向
 
     @view_config(route_name='two')
     def two(self):
         return {'name': 'two'}
+
+    @view_config(route_name='plain')
+    def plain(self):
+        name=self.request.params.get('name','No Name Provided')  #接收前端传来的params
+        body = 'URL %s with name: %s' % (self.request.url, name)
+        return Response(
+            content_type='text/plain',
+            body=body
+        )
