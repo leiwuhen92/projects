@@ -36,6 +36,7 @@ class projectsviews:
         return HTTPFound(location='/plain')  #重定向
 
     @view_config(route_name='two')
+    @view_config(route_name='chapter14_json', renderer='json')
     def two(self):
         return {'name': 'two'}
 

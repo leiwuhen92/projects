@@ -94,5 +94,10 @@ class FunctionalTests(unittest.TestCase):
         res=self.testapp.get('/static/app.css',status=200)
         self.assertIn(b'body',res.body)
 
+    def test_chapter14_json(self):
+        res = self.testapp.get('/chapter14.json', status=200)
+        self.assertIn(b'{"name": "two"}', res.body)
+        self.assertEqual(res.content_type, 'application/json')
+
 
 
