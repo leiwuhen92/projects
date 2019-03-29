@@ -10,7 +10,7 @@ def main(global_config, **settings):
     config.include('pyramid_jinja2')
     config.include('pyramid_chameleon')
 
-    config.add_static_view('static', 'static', cache_max_age=3600)
+    config.add_static_view('static', 'static', cache_max_age=3600)  #添加静态资产
     config.add_route('home', '/')
 
 
