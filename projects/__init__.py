@@ -29,6 +29,9 @@ def main(global_config, **settings):
 
     config.add_route('chapter14_json', '/chapter14.json')
 
+    config.add_route('chapter15', '/chapter15/{first}/{last}')
+    config.add_route('home15', '/chapter15')
+
 
     config.scan('.views')
     return config.make_wsgi_app()

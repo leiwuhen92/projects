@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16461212-b382-4e39-9edd-fdb24a7c4b50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/projects/templates/chapter15.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/templates/delete15.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/templates/edit15.pt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projects/templates/home15.pt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projects/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+            <state relative-caret-position="220">
+              <caret line="84" column="86" selection-start-line="84" selection-start-column="76" selection-end-line="84" selection-end-column="86" />
               <folding>
                 <element signature="e#0#67#0" expanded="true" />
               </folding>
@@ -31,10 +34,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/projects/templates/chapter11.pt">
+        <entry file="file://$PROJECT_DIR$/projects/templates/delete15.pt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state relative-caret-position="150">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/templates/edit15.pt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/templates/chapter15.pt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/projects/templates/home15.pt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -54,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projects/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="29" column="55" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="55" />
+            <state relative-caret-position="420">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -72,9 +102,13 @@
         <option value="$PROJECT_DIR$/projects/templates/howdy.pt" />
         <option value="$PROJECT_DIR$/projects/static/app.css" />
         <option value="$PROJECT_DIR$/projects/templates/chapter11.pt" />
-        <option value="$PROJECT_DIR$/projects/views.py" />
-        <option value="$PROJECT_DIR$/projects/__init__.py" />
         <option value="$PROJECT_DIR$/projects/tests.py" />
+        <option value="$PROJECT_DIR$/projects/__init__.py" />
+        <option value="$PROJECT_DIR$/projects/templates/delete15.pt" />
+        <option value="$PROJECT_DIR$/projects/templates/edit15.pt" />
+        <option value="$PROJECT_DIR$/projects/templates/home15.pt" />
+        <option value="$PROJECT_DIR$/projects/templates/chapter15.pt" />
+        <option value="$PROJECT_DIR$/projects/views.py" />
       </list>
     </option>
   </component>
@@ -188,12 +222,12 @@
       <workItem from="1551080725413" duration="751000" />
       <workItem from="1551081741652" duration="1622000" />
       <workItem from="1551084084680" duration="4867000" />
-      <workItem from="1553760901876" duration="6674000" />
+      <workItem from="1553760901876" duration="10289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13914000" />
+    <option name="totallyTimeSpent" value="17529000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -206,6 +240,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -234,16 +269,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/projects/static/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -265,6 +290,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Python37/Lib/site-packages/pyramid/config/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1127">
+          <caret line="2029" column="58" lean-forward="true" selection-start-line="2029" selection-start-column="58" selection-end-line="2029" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/projects/templates/chapter11.pt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -272,10 +304,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python37/Lib/site-packages/pyramid/config/views.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1127">
-          <caret line="2029" column="58" lean-forward="true" selection-start-line="2029" selection-start-column="58" selection-end-line="2029" selection-end-column="58" />
+        <state relative-caret-position="375">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -291,15 +326,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" column="55" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="55" />
+        <state relative-caret-position="420">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/templates/home15.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/templates/delete15.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/templates/edit15.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/templates/chapter15.pt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+        <state relative-caret-position="220">
+          <caret line="84" column="86" selection-start-line="84" selection-start-column="76" selection-end-line="84" selection-end-column="86" />
           <folding>
             <element signature="e#0#67#0" expanded="true" />
           </folding>

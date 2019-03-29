@@ -60,3 +60,34 @@ def chapter11(request):
             'first': first,
             'last': last
         }
+
+
+
+@view_defaults(route_name='chapter15')
+class chapter15(object):
+    def __init__(self, request):
+        self.request = request
+
+    @property
+    def full_name(self):
+        first = self.request.matchdict['first']
+        last = self.request.matchdict['last']
+        return first + ' ' + last
+
+    @view_config(route_name='home15', renderer='templates/home15.pt')
+    def home(self):
+        return {'page_title': 'Home15 View'}
+
+    @view_config(renderer='templates/chapter15.pt')
+    def chapter15(self):
+        return {'page_title': 'chapter15 View'}
+
+    @view_config(request_method='POST', renderer='templates/edit15.pt')
+    def edit15(self):
+        new_name = self.request.params['new_name']
+        return {'page_title': 'Edit View', 'new_name': new_name}
+
+    @view_config(request_method='POST', request_param='form.delete',renderer='templates/delete15.pt')
+    def delete(self):
+        print('Deleted')
+        return {'page_title': 'Delete View'}
