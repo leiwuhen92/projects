@@ -6,6 +6,9 @@ from pyramid.response import Response
 from pyramid.httpexceptions import HTTPFound
 
 
+import logging
+logger=logging.getLogger(__name__)
+
 @view_config(route_name='home', renderer='templates/mytemplate.jinja2')
 def my_view(request):
     return {'project': 'projects'}
@@ -29,6 +32,16 @@ def hello(request):
 class projectsviews:
     def __init__(self, request):
         self.request = request
+
+    @property
+    def counter(self):
+        session = self.request.session
+        if 'counter' in session:
+            session['counter'] += 1
+        else:
+            session['counter'] = 1
+
+        return session['counter']
 
     @view_config(route_name='one')
     def one(self):
@@ -76,6 +89,7 @@ class chapter15(object):
 
     @view_config(route_name='home15', renderer='templates/home15.pt')
     def home(self):
+        logger.info('Home 15 view')
         return {'page_title': 'Home15 View'}
 
     @view_config(renderer='templates/chapter15.pt')
