@@ -14,6 +14,7 @@ requires = [
     'pyramid_chameleon',
     'pyramid_debugtoolbar',
     'waitress',   #使用哪类服务器
+    'deform',
     ]
 
 tests_require = [

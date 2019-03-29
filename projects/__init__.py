@@ -33,6 +33,12 @@ def main(global_config, **settings):
     config.add_route('chapter15', '/chapter15/{first}/{last}')
     config.add_route('home15', '/chapter15')
 
+##################chapter18################################
+    config.add_route('wiki_view', '/wiki')
+    config.add_route('wikipage_add', '/add')
+    config.add_route('wikipage_view', '/{uid}')
+    config.add_route('wikipage_edit', '/{uid}/edit')
+
 
     config.scan('.views')
     return config.make_wsgi_app()
